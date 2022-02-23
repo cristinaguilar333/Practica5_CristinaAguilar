@@ -51,7 +51,7 @@
             android:id="@+id/button_hot_drinks"
             android:text="hot drinks"
             android:textColor="@color/dusty_white"
-            android:background="@drawable/second_gradient"
+            android:background="@drawable/first_gradient"
             android:paddingHorizontal="20dp"
             android:layout_marginRight="2dp"
             android:layout_gravity="fill_horizontal"
