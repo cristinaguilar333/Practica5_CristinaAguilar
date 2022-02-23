@@ -14,7 +14,7 @@ class RegistrerActivity : AppCompatActivity() {
         val button: Button =findViewById(R.id.sing_in_button)
 
         button.setOnClickListener{
-            var intent: Intent= Intent(this, activity_menu::class.java)
+            var intent: Intent= Intent(this, activity_menu:: class.java)
             startActivity(intent)
         }
     }

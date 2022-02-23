@@ -29,6 +29,7 @@ class ProductosActivity : AppCompatActivity() {
 
         listView.adapter=adaptador
     }
+
     fun agregarProductos(option:String?){
 
         when(option){
@@ -67,9 +68,9 @@ class ProductosActivity : AppCompatActivity() {
                 menu.add(Product("Nachos", R.drawable. nachos, "Tortilla chips layered with beef and   melted cheddar cheese. Served with fried beans, guacamole, pico de gallo, and sour topping.",  7.00))
             }
 
-            }
-
         }
+
+
 
     }
 
