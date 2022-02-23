@@ -10,6 +10,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_productos.*
 import java.util.*
 
 class ProductosActivity : AppCompatActivity() {
@@ -24,6 +25,7 @@ class ProductosActivity : AppCompatActivity() {
 
         agregarProductos(menuOption)
 
+
         var listView: ListView=findViewById(R.id.listview) as ListView
         var adaptador: AdaptadorProductos= AdaptadorProductos(this,  menu)
 
@@ -31,9 +33,10 @@ class ProductosActivity : AppCompatActivity() {
     }
 
     fun agregarProductos(option:String?){
-
+        var imagenMenu: ImageView =findViewById(R.id.imagenMenu) as ImageView
         when(option){
             "coldDrinks"->{
+                imagenMenu.setImageResource(R.drawable.colddrinks)
                 menu.add(Product("Caramel Frap", R.drawable.caramelfrap, "Caramel syrup meets coffee, milk and ice and whipped cream and buttery caramel sauce layer the love on top.", 5.00))
                 menu.add(Product("Chocolate Frap", R.drawable.chocolatefrap, "Rich mocha-flavored sauce meets up with chocolaty chips, milk and ice for a blender bash.", 6.00))
                 menu.add(Product("Cold Brew", R.drawable.coldbrew, "Created by steeping medium-to-coarse ground coffee in room temperature water for 12 hours or longer.", 3.00))
@@ -43,6 +46,7 @@ class ProductosActivity : AppCompatActivity() {
             }
 
             "hotDrinks"->{
+                imagenMenu.setImageResource(R.drawable.hotdrinks)
                 menu.add(Product("Latte", R.drawable.latte, "Coffee drink made with espresso and steamed milk", 6.00))
                 menu.add(Product("Hot chocolate", R.drawable.hotchocolate, "Heated drink consisting of shaved chocolate, topped with marshmallows.", 5.00))
                 menu.add(Product("Espresso", R.drawable.espresso, "Full-flavored, concentrated form of coffee.", 4.00))
@@ -52,6 +56,7 @@ class ProductosActivity : AppCompatActivity() {
             }
 
             "sweets"->{
+                imagenMenu.setImageResource(R.drawable.sweets)
                 menu.add(Product("Blueberry cake", R.drawable.blueberrycake, "Vanilla cake flavor, topped with cheese topping and blueberries.", 6.00))
                 menu.add(Product("Chocolate cupcake", R.drawable.chocolatecupcake, "Chocolate cupcakes topped with butter cream and cherries", 3.00))
                 menu.add(Product("Lemon tartalette", R.drawable.lemontartalette, "Pastry shell with a lemon flavored filling", 4.00))
@@ -61,6 +66,7 @@ class ProductosActivity : AppCompatActivity() {
             }
 
             "salties"-> {
+                imagenMenu.setImageResource(R.drawable.salties)
                 menu.add(Product("Chicken crepes", R.drawable.chickencrepes, "Fine crepes stuffed with Alfredo chicken, spinach and mushrooms.", 6.00))
                 menu.add(Product("Club Sandwich", R.drawable.clubsandwich, "A delicious sandwich served with french fries.", 5.00))
                 menu.add(Product("Panini", R.drawable.hampanini, "Sandwich made with Italian bread  served warmed by grilling.", 4.00))
